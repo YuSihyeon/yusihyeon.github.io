@@ -16,3 +16,5 @@
 header:has(>.language:only-child){justify-content:flex-end}.intro-label[hidden]{display:none}
 
 .intro em{color:#4198c5}
+
+.award-facts{margin:12px 0 14px;font-size:12px}.award-facts>div{display:grid;grid-template-columns:105px 1fr;gap:12px;margin:7px 0}.award-facts dt{font-weight:500;color:#596675}.award-facts dd{margin:0;color:var(--ink)}@media(max-width:760px){.award-facts>div{grid-template-columns:1fr;gap:1px;margin:12px 0}.award-facts dt{font-size:10px;color:var(--muted)}}
