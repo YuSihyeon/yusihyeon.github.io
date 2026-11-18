@@ -8,6 +8,9 @@
     const offset = anchor ? anchor.getBoundingClientRect().top : 0;
     root.dataset.lang = selected;
     root.lang = selected;
+    document.querySelectorAll("[data-href-ko][data-href-en]").forEach(link => {
+      link.href = selected === "en" ? link.dataset.hrefEn : link.dataset.hrefKo;
+    });
     buttons.forEach(b => b.setAttribute('aria-pressed', String(b.dataset.language === selected)));
     try { localStorage.setItem('sihyeon-language', selected); } catch {}
     if (anchor && window.scrollY > 0) window.scrollBy({top:anchor.getBoundingClientRect().top-offset,behavior:'instant'});
